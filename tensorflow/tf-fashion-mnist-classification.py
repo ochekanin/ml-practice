@@ -58,6 +58,4 @@ for i in range(prediction_numbers):
     print("\n")
     print(">>> Prediction ", i)
     print(predictions[i])
-    print("Predicted label ", np.argmax(predictions[i]))
-    print("Actual label ", test_labels[i])
-
+    print("Predicted label {}, Actual label {}", np.argmax(predictions[i]), test_labels[i])
