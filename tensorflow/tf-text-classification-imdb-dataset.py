@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 print(">>> TensorFlow version = ", tf.__version__)
 
@@ -93,14 +94,11 @@ results = model.evaluate(test_data, test_labels)
 print(results)
 
 history_dict = history.history
-history_dict.keys()
 
-import matplotlib.pyplot as plt
-
-acc = history.history['acc']
-val_acc = history.history['val_acc']
-loss = history.history['loss']
-val_loss = history.history['val_loss']
+acc = history_dict['acc']
+val_acc = history_dict['val_acc']
+loss = history_dict['loss']
+val_loss = history_dict['val_loss']
 
 epochs = range(1, len(acc) + 1)
 
