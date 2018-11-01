@@ -16,15 +16,14 @@ NEGATIVE_REVIEW = 0
 POSITIVE_REVIEW = 1
 
 print("\n")
-print(">>> Training entries: {}, labels: {}".format(len(train_data), len(train_labels)))
+print(">>> Training entries: %d, labels: %d" % (len(train_data), len(train_labels)))
 
 print("\n")
 print(">>> The first training data")
 print(train_data[0])
 
 print("\n")
-print(">>> Training entries length: first/second = {}/{}".
-      format(len(train_data[0]), len(train_data[1])))
+print(">>> Training entries length: first/second = %d/%d" % (len(train_data[0]), len(train_data[1])))
 
 # A dictionary mapping words to an integer index
 word_index = imdb.get_word_index()
@@ -56,8 +55,8 @@ test_data = keras.preprocessing.sequence.pad_sequences(test_data,
                                                        maxlen=256)
 
 print("\n")
-print(">>> Training entries length after preprocessing: first/second = {}/{}".
-      format(len(train_data[0]), len(train_data[1])))
+print(">>> Training entries length after preprocessing: first/second = %d/%d" %
+      (len(train_data[0]), len(train_data[1])))
 
 vocal_size=10000
 
