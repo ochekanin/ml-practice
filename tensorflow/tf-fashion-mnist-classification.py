@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import random
 import tensorflow as tf
@@ -58,4 +58,5 @@ for i in range(prediction_numbers):
     print("\n")
     print(">>> Prediction ", i)
     print(predictions[i])
-    print("Predicted label {}, Actual label {}", np.argmax(predictions[i]), test_labels[i])
+    print("Predicted label {predicted}, Actual label {actual}",
+          predicted=np.argmax(predictions[i]), actual=test_labels[i])

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import tensorflow as tf
 from tensorflow import keras
@@ -23,8 +23,8 @@ print(">>> The first training data")
 print(train_data[0])
 
 print("\n")
-print(">>> Training entries length: first/second = {}/{}".
-      format(len(train_data[0]), len(train_data[1])))
+print(">>> Training entries length: first/second = {first}/{second}".
+      format(first=len(train_data[0]), second=len(train_data[1])))
 
 # A dictionary mapping words to an integer index
 word_index = imdb.get_word_index()
