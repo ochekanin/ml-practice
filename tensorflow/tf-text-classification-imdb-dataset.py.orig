@@ -23,8 +23,12 @@ print(">>> The first training data")
 print(train_data[0])
 
 print("\n")
+<<<<<<< HEAD
 print(">>> Training entries length: first/second = {first}/{second}".
       format(first=len(train_data[0]), second=len(train_data[1])))
+=======
+print(">>> Training entries length: first/second = %d/%d" % (len(train_data[0]), len(train_data[1])))
+>>>>>>> 7c637180265692ba9ee112e3a0e5c64145383dba
 
 # A dictionary mapping words to an integer index
 word_index = imdb.get_word_index()
