@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 import random
 import tensorflow as tf
 from tensorflow import keras
@@ -7,7 +9,11 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 
+print("Python version: %d.%d.%d" % (sys.version_info[0],
+      sys.version_info[1], sys.version_info[2]))
 print("TensorFlow version = %s" % tf.__version__)
+
+sys.exit(0)
 
 fashion_mnist = keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
@@ -58,5 +64,6 @@ for i in range(prediction_numbers):
     print("\n")
     print(">>> Prediction ", i)
     print(predictions[i])
-    print("Predicted label {predicted}, Actual label {actual}",
-          predicted=np.argmax(predictions[i]), actual=test_labels[i])
+    print("Predicted label {predicted}, Actual label {actual}".
+          format(predicted=np.argmax(predictions[i]), actual=test_labels[i]))
+          
